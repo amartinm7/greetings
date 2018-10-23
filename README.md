@@ -1,7 +1,7 @@
 ![springboot](https://sdtimes.com/wp-content/uploads/2018/03/spring-boot-490x257.png)
 
 # Greetings
-Bootstrap application for testing a bookshelf
+Bootstrap application for testing a rest API
 
 ## create a new spring project from the scratch
 First of all, you can generate the scaffolding of this project using the INITIALIZR tool: 
