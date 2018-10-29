@@ -49,7 +49,8 @@ so the client can collect the methods exposed in a concrete resource or path usi
 This method retrieve the methods available for the path and the response headers.
 This response headers are the responsible to inform to the client if the CORS is enabled in this resource. 
 Access-Control-Expose-Headers
-More or less this:
+
+More or less this using a spring xml config file:
 ```
 <mvc:cors>
  
