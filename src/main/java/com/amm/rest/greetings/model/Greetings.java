@@ -22,4 +22,12 @@ public class Greetings {
     public String getContent() {
         return content;
     }
+
+    @Override
+    public String toString() {
+        return "Greetings{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }

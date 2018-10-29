@@ -71,3 +71,11 @@ More or less this using a spring xml config file:
 ```
 
 ![Cors](./_media/cors_flow.png)
+
+
+## actuator spring plugin for health check, status and stop service
+```
+curl localhost:8080/actuator/health
+curl localhost:8080/actuator/info
+curl localhost:8080/actuator/shutdown
+```

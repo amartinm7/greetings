@@ -29,10 +29,14 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-actuator") //curl localhost:8080/actuator/health
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'ch.qos.logback:logback-classic'
+    compile 'org.slf4j:jul-to-slf4j'
+    compile 'org.slf4j:log4j-over-slf4j'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-//management.endpoints.shutdown.enabled=true
-//curl -X POST localhost:8080/actuator/shutdown
+
+
+
