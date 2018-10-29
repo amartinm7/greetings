@@ -79,3 +79,11 @@ curl localhost:8080/actuator/health
 curl localhost:8080/actuator/info
 curl localhost:8080/actuator/shutdown
 ```
+
+
+## killing processes
+
+```
+ps -aux | grep "greetings-rest-service-0.1.0.jar"
+kill -9 $(jps | grep -i "greetings-rest-service-0.1.0.jar" | awk '{print $1}')
+```
