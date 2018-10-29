@@ -20,6 +20,9 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 ```
 
+## options greetings to know which methods are enabled in the greetings path or resource
+curl -X OPTIONS -i "http://localhost:8080/greetings?name=ant" -H "Content-type: application/json" -H "Accept: application/json"
+
 ## get greetings
 curl -X GET -i "http://localhost:8080/greetings?name=ant" -H "Content-type: application/json" -H "Accept: application/json"
 
