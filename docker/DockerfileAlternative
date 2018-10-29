@@ -1,0 +1,14 @@
+FROM openjdk:8-jdk-alpine
+
+MAINTAINER Antonio Martin
+
+EXPOSE 8080
+
+ENV APPLICATION_NAME greetings
+ENV JAVA_OPTS -Xmx512m
+
+COPY *.jar /usr/local/greetings/
+
+WORKDIR /usr/local/greetings
+
+ENTRYPOINT java -jar *.jar

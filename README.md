@@ -10,6 +10,16 @@ https://start.spring.io/
 ## run springboot app
 ./gradlew build bootRun
 
+## Dockerize the app: create a docker image and run the project from command line
+From the project root folder exec the commands to create a docker image and run it:
+
+```bash
+docker build -f docker/Dockerfile . -t greetings
+docker run -p 8080:8080 greetings
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+```
+
 ## get greetings
 curl -X GET -i "http://localhost:8080/greetings?name=ant" -H "Content-type: application/json" -H "Accept: application/json"
 
