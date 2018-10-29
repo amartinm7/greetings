@@ -87,3 +87,9 @@ curl localhost:8080/actuator/shutdown
 ps -aux | grep "greetings-rest-service-0.1.0.jar"
 kill -9 $(jps | grep -i "greetings-rest-service-0.1.0.jar" | awk '{print $1}')
 ```
+
+## installing spring cli
+https://docs.spring.io/spring-boot/docs/2.0.5.RELEASE/reference/htmlsingle/#getting-started-installing-the-cli
+```
+sdk install springboot
+```
