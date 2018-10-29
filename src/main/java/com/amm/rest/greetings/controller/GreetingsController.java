@@ -13,13 +13,14 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(maxAge = 3600, origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.HEAD, RequestMethod.OPTIONS})
 @RestController
 public class GreetingsController {
 
     private static final String template = "Hello %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(
+        @RequestMapping(
             method= RequestMethod.GET,
             value = "/",
             produces = MediaType.APPLICATION_JSON_VALUE
