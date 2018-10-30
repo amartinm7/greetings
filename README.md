@@ -27,7 +27,7 @@ curl -X OPTIONS -i "http://localhost:8080/greetings?name=ant" -H "Content-type: 
 curl -X GET -i "http://localhost:8080/greetings?name=ant" -H "Content-type: application/json" -H "Accept: application/json"
 
 ## post greetings
-curl -X POST -i "http://localhost:8080/dogreetings?name=World" -H "Content-type: application/json" -H "Accept: application/json" -d '{"id":"33", "content":"hello"}'
+curl -X POST -i "http://localhost:8080/doGreetings?name=World" -H "Content-type: application/json" -H "Accept: application/json" -d '{"id":"33", "content":"hello"}'
 
 ## References
 https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#spring-webflux

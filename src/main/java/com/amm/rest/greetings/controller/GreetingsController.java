@@ -60,11 +60,11 @@ public class GreetingsController {
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE
     )
     public ResponseEntity<Greetings> postGreetings(@RequestBody String json) {
-        System.out.println(json);
+        LOGGER.info(String.format("%s", json));
         try {
             HashMap<String, Object> map =
                     new ObjectMapper().readValue(json, HashMap.class);
-            final Greetings greetings = new Greetings(Long.valueOf((Integer)map.get("id")), (String)map.get("content"));
+            final Greetings greetings = new Greetings(Long.valueOf((String)map.get("id")), (String)map.get("content"));
             LOGGER.info(String.format("%s", greetings.toString()));
             return new ResponseEntity<Greetings>(greetings, HttpStatus.OK);
         }catch(IOException ex) {

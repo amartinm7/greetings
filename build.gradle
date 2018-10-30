@@ -11,7 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'groovy'
+// apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
@@ -19,8 +19,8 @@ apply plugin: 'io.spring.dependency-management'
 
 sourceSets {
     main {
-        java { srcDirs = [] }    // no source dirs for the java compiler
-        groovy { srcDirs = ["src/main/java", "src/main/groovy"] }  // compile   everything in src/ with groovy
+        //java { srcDirs = [] }    // no source dirs for the java compiler
+        // groovy { srcDirs = ["src/main/java", "src/main/groovy"] }  // compile   everything in src/ with groovy
     }
 }
 
