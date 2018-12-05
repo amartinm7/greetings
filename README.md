@@ -8,11 +8,15 @@ First of all, you can generate the scaffolding of this project using the INITIAL
 https://start.spring.io/
 
 ## run springboot app
-
 ```
 gradle wrapper
 ./gradlew build
 ./gradlew build bootRun
+```
+
+or run fat jar
+```
+java -jar build/libs/greetings-rest-service-0.1.0.jar
 ```
 
 ## Dockerize the app: create a docker image and run the project from command line
