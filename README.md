@@ -101,3 +101,18 @@ sdk install springboot
 
 ## spring guides
 https://spring.io/guides/gs/gradle/
+
+
+## intellij tips
+
+### avoid out folder
+File | Project Structure | Project Settings | Modules | Paths tab | Compiler output
+Select 'use module compile output path' and add the build main and test folders
+
+### add navigation arrows to the toolbox
+preferences | navigation bar toolbar
+click + button add the left and right arrows from the navigation list
+
+### organize imports like eclipse
+preferences | editor | general | auto imports
+marks the checks with 'unambiguos' labels 
