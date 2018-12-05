@@ -22,14 +22,14 @@ public class GreetingsControllerIT {
 
     @Test
     public void greetingShouldReturnDefaultMessage() throws Exception {
-        Greetings expected = new Greetings(1L,"Hello World!");
+        Greetings expected = new Greetings(1,"Hello World!");
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
                 Greetings.class)).isEqualToComparingOnlyGivenFields(expected,"content");
     }
 
     @Test
     public void greetingShouldReturnTheMessage() throws Exception {
-        Greetings expected = new Greetings(1L,"Hello World!");
+        Greetings expected = new Greetings(1,"Hello World!");
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/greetings",
                 Greetings.class)).isEqualToComparingOnlyGivenFields(expected,"id","content");
     }

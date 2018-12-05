@@ -8,7 +8,12 @@ First of all, you can generate the scaffolding of this project using the INITIAL
 https://start.spring.io/
 
 ## run springboot app
+
+```
+gradle wrapper
+./gradlew build
 ./gradlew build bootRun
+```
 
 ## Dockerize the app: create a docker image and run the project from command line
 From the project root folder exec the commands to create a docker image and run it:
@@ -93,3 +98,6 @@ https://docs.spring.io/spring-boot/docs/2.0.5.RELEASE/reference/htmlsingle/#gett
 ```
 sdk install springboot
 ```
+
+## spring guides
+https://spring.io/guides/gs/gradle/

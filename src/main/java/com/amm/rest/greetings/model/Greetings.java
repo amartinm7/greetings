@@ -2,20 +2,20 @@ package com.amm.rest.greetings.model;
 
 public class Greetings {
 
-    private Long id;
+    private Integer id;
     private String content;
 
     public Greetings() {
         super();
     }
 
-    public Greetings(Long id, String content) {
+    public Greetings(Integer id, String content) {
         super();
         this.id = id;
         this.content = content;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 

@@ -1,9 +1,5 @@
 package com.amm.rest.greetings.controller;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.concurrent.atomic.AtomicLong;
-
 import com.amm.rest.greetings.model.Greetings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -13,13 +9,17 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+
 @CrossOrigin(maxAge = 3600, origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.HEAD, RequestMethod.OPTIONS})
 @RestController
 public class GreetingsController {
     private static final Logger LOGGER = LoggerFactory.getLogger(GreetingsController.class);
 
     private static final String template = "Hello %s!";
-    private final AtomicLong counter = new AtomicLong();
+    private final AtomicInteger counter = new AtomicInteger();
 
         @RequestMapping(
             method= RequestMethod.GET,
@@ -39,7 +39,7 @@ public class GreetingsController {
             produces = MediaType.APPLICATION_JSON_VALUE
             )
     public ResponseEntity<Greetings> getGreetings(@RequestParam(value="name", defaultValue="World") String name) {
-        final Greetings greetings = new Greetings(1L, "Hello World!");
+        final Greetings greetings = new Greetings(1, "Hello World!");
         LOGGER.info(String.format("%s", greetings.toString()));
         return new ResponseEntity<Greetings>(greetings, HttpStatus.OK);
     }
@@ -64,11 +64,11 @@ public class GreetingsController {
         try {
             HashMap<String, Object> map =
                     new ObjectMapper().readValue(json, HashMap.class);
-            final Greetings greetings = new Greetings(Long.valueOf((String)map.get("id")), (String)map.get("content"));
+            final Greetings greetings = new Greetings((Integer)map.get("id"), (String)map.get("content"));
             LOGGER.info(String.format("%s", greetings.toString()));
             return new ResponseEntity<Greetings>(greetings, HttpStatus.OK);
         }catch(IOException ex) {
-            final Greetings greetings = new Greetings(0L,"");
+            final Greetings greetings = new Greetings(0,"");
             LOGGER.info(String.format("%s", greetings.toString()));
             return new ResponseEntity<Greetings>(greetings, HttpStatus.BAD_REQUEST);
         }
