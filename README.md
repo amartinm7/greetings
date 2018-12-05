@@ -105,6 +105,7 @@ sdk install springboot
 
 ## spring guides
 https://spring.io/guides/gs/gradle/
+https://spring.io/guides/gs/actuator-service/
 
 
 ## intellij tips
