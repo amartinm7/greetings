@@ -81,7 +81,7 @@ This response headers are the responsible to inform to the client if the CORS is
 Access-Control-Expose-Headers
 
 More or less this using a spring xml config file:
-```
+```xml
 <mvc:cors>
  
     <mvc:mapping path="/api/**"
@@ -101,7 +101,7 @@ More or less this using a spring xml config file:
 
 
 ## actuator spring plugin for health check, status and stop service
-```
+```bash
 curl localhost:8080/actuator/health
 curl localhost:8080/actuator/info
 curl localhost:8080/actuator/shutdown
@@ -110,14 +110,14 @@ curl localhost:8080/actuator/shutdown
 
 ## killing processes
 
-```
+```bash
 ps -aux | grep "greetings-rest-service-0.1.0.jar"
 kill -9 $(jps | grep -i "greetings-rest-service-0.1.0.jar" | awk '{print $1}')
 ```
 
 ## installing spring cli
 https://docs.spring.io/spring-boot/docs/2.0.5.RELEASE/reference/htmlsingle/#getting-started-installing-the-cli
-```
+```bash
 sdk install springboot
 ```
 
